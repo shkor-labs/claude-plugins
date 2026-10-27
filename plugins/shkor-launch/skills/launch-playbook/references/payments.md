@@ -1,5 +1,12 @@
 # Step 4. Take money
 
+0. **Check who will pay.** The checkout is Stripe, so it charges cards in USD
+   through a US entity. If the buyers are mainly in a country where cards often
+   fail on foreign merchants (Belarus and Russia, for example), say so before
+   building the checkout. Confirm with one real test payment from a local card.
+   If it fails, keep the free pilot or a "leave a request" flow for now, and
+   file a `feature_request` for a local payment rail. Don't put a Buy button on
+   the page that most of the audience can't use.
 1. `product_create` with `name`, `price_usd` (0.5–20000) and `interval`
    (`month` | `year` | `week` | `day` | `one_time`). New products start in
    Stripe **test** mode and return a Payment Link.
