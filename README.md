@@ -1,6 +1,6 @@
 # Shkor Labs plugins for Claude Code
 
-Turn what you vibe-coded into a product people pay for.
+Turn what you vibe-coded into a product people pay for. → https://shkor.com/launch/
 
 ```
 /plugin marketplace add shkor-labs/claude-plugins
