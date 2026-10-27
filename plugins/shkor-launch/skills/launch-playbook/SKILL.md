@@ -16,7 +16,11 @@ starting the next. A launched rough product beats a polished unlaunched one.
 
 ## Before anything: is the MCP connected?
 
-Call the `whoami` tool of the `shkor` server.
+Call the `whoami` tool of the `shkor` server. The same server may already be
+connected under another name, usually `simbiot`, with the same endpoint
+`https://cil.by/mcp`. In that case Claude Code hides the plugin's copy, so use
+those tools instead. Everywhere below, "the `shkor` server" means whichever of
+the two is present.
 
 - **It works.** Note the project and plan it reports, then continue.
 - **401 / unauthorized / tool missing.** Stop and tell the user that the
