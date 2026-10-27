@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "shkor": {
+      "type": "http",
+      "url": "https://cil.by/mcp",
+      "headers": { "Authorization": "Bearer ${SHKOR_TOKEN:-missing}" }
+    }
+  }
+}
