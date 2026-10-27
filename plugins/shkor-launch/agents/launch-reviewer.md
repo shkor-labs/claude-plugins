@@ -14,7 +14,7 @@ link are there), and the checklist at
 Method:
 - Check the live site, not just the code: `curl -sI`, fetch the page, follow
   footer links, time the response.
-- Check the payment link: does it resolve, is it live (not `test_` in the URL),
+- Check the payment link: does it resolve, is it test or live (report which; test is OK only if live payments were requested),
   and does the price match `LAUNCH.md`?
 - Search the repo and git history for secrets without printing their values.
   Report the file and commit only.

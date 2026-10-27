@@ -9,7 +9,7 @@
       "description": "Launch what you vibe-coded: validate, ship to a public URL, take payments, add legal pages, run first ads and read the numbers. Playbook skill + Shkor MCP (git, subdomains, Stripe, legal entity, Meta ads, earnings).",
       "author": { "name": "Shkor Labs" },
       "category": "productivity",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./plugins/shkor-launch"
     }
   ]

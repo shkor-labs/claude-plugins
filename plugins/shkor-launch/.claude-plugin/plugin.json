@@ -1,6 +1,6 @@
 {
   "name": "shkor-launch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Launch what you vibe-coded: validate, ship to a public URL, take payments, add legal pages, run first ads and read the numbers.",
   "author": { "name": "Shkor Labs", "email": "alex@shkor.com" },
   "homepage": "https://shkor.com",

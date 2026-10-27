@@ -34,8 +34,8 @@ or write it into project files.
 |---|------|-----------|-------|---------|
 | 1 | Frame the offer | one-line promise, one buyer, one price | none | `references/offer.md` |
 | 2 | Project + repo | project exists, code pushed to private repo | `project_create`, `git_repo_create` | `references/ship.md` |
-| 3 | Public URL | `https://<slug>.cil.by` opens over HTTPS | `site_request` | `references/ship.md` |
-| 4 | Take money | live payment link on the page, test payment passed | `product_create`, `product_set_mode`, `webhook_route_create` | `references/payments.md` |
+| 3 | Public URL | `https://<slug>.cil.by` opens over HTTPS | `site_publish` (static) or `site_request` (own server) | `references/ship.md` |
+| 4 | Take money | test payment passed, live payments requested | `product_create`, `product_list`, `webhook_route_create` | `references/payments.md` |
 | 5 | Legal | footer with seller details, terms/privacy/refund pages | `legal_entity` | `references/legal.md` |
 | 6 | First traffic | ads campaign approved and spending, tracking snippet on site | `ads_launch`, `ads_status` | `references/traffic.md` |
 | 7 | Read the numbers | decision: keep / change offer / kill | `ads_status`, `ads_who`, `earnings` | `references/numbers.md` |
@@ -47,12 +47,13 @@ Read only the reference for the step you are on.
 - **Find the current step first.** Ask or check what already exists
   (`product_list`, `git_repo_list`, a site that already opens) before creating
   anything. Don't create duplicate projects, repos or products.
-- **Test mode first, then live.** Products start in Stripe `test`. Switch to
-  `live` only after a test payment went through end to end and the user said
-  yes.
-- **Spending money needs an explicit yes.** That covers `ads_launch`, switching
-  to `live`, and anything else that charges the user. Show the amount and the
-  duration, then wait for the answer.
+- **Test mode first, then live.** Products start in Stripe `test`. Live
+  payments are switched on by the studio after a review, which the user
+  requests in their account at https://shkor.com/account. Don't try to switch
+  modes yourself.
+- **Spending money needs an explicit yes.** That covers `ads_launch` and
+  anything else that charges the user. Show the amount and the duration, then
+  wait for the answer.
 - **One price.** One product, one price in USD. No tiers, coupons or "early
   bird" variants until the first sale (step 1 explains why).
 - **Be honest on the page.** No fake testimonials, user counts or "as seen in"
