@@ -56,6 +56,33 @@ If there's no server and the product needs a back-end, say so plainly. The
 options are to move the back-end logic to a hosted service (Supabase, Firebase)
 and publish the front-end with path A, or to upgrade to a plan with a server.
 
+### Own domain (optional): `domain_connect`
+
+Once `<slug>.cil.by` works, the user's own domain can point at it. It serves
+whatever the slug serves, so updates via `site_publish` show up on both.
+
+1. Ask which domain to use and whether they own it. If they need to buy one,
+   any registrar works. Don't block the launch on it, because `<slug>.cil.by`
+   is enough to start.
+2. Tell them exactly what to set at their registrar or DNS provider:
+   - for the root domain (`myproduct.com`): an **A record** pointing to
+     `204.168.232.21`;
+   - for `www` or another subdomain: a **CNAME** to `cil.by`, or the same
+     A record;
+   - **delete** any other A records and **all AAAA records** for those names.
+     The registrar's default "parking" records are the usual culprit.
+   - If the domain is behind Cloudflare, set the proxy to "DNS only" (grey
+     cloud).
+3. Call `domain_connect` with `domain` and `slug`. If DNS isn't there yet, the
+   response says what it found and what it expected. Relay that and try again
+   later. Propagation can take from minutes to a few hours.
+4. Connect the root and `www` separately, which takes two calls.
+5. The HTTPS certificate is issued automatically, usually within a minute.
+
+After switching, update the URL in `LAUNCH.md`, in the ads (step 6) and in the
+legal pages (`legal_entity` with the new `domain`). `domain_list` shows what's
+connected. `domain_disconnect` removes a domain, and the slug keeps working.
+
 ### Both paths
 
 The first request to a new subdomain may fail for ~15 s while TLS is issued.

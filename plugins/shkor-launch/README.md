@@ -8,7 +8,7 @@ A Claude Code plugin from Shkor Labs that takes a product you built with AI from
 | Part | What it does |
 |---|---|
 | `launch-playbook` skill | Seven steps: offer → repo → public URL → payments → legal → first traffic → numbers |
-| `shkor` MCP server | The infrastructure: private git, static hosting on `<slug>.cil.by` straight from your repo (no server needed), proxy to your own server, Stripe products and payment links, payment webhooks, legal entity details, Meta ads with fraud-filtered stats, earnings |
+| `shkor` MCP server | The infrastructure: private git, static hosting on `<slug>.cil.by` straight from your repo (no server needed) or your own domain, proxy to your own server, Stripe products and payment links, payment webhooks, legal entity details, Meta ads with fraud-filtered stats, earnings |
 | `/launch` | Continue from the step you're on |
 | `/launch-check` | Readiness review by an independent agent |
 | `/launch-numbers` | Read the funnel and decide keep / change / kill |

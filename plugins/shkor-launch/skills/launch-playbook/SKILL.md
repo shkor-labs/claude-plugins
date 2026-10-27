@@ -38,7 +38,7 @@ or write it into project files.
 |---|------|-----------|-------|---------|
 | 1 | Frame the offer | one-line promise, one buyer, one price | none | `references/offer.md` |
 | 2 | Project + repo | project exists, code pushed to private repo | `project_create`, `git_repo_create` | `references/ship.md` |
-| 3 | Public URL | `https://<slug>.cil.by` opens over HTTPS | `site_publish` (static) or `site_request` (own server) | `references/ship.md` |
+| 3 | Public URL | `https://<slug>.cil.by` (and optionally the user's own domain) opens over HTTPS | `site_publish` (static) or `site_request` (own server), `domain_connect` | `references/ship.md` |
 | 4 | Take money | test payment passed, live payments requested | `product_create`, `product_list`, `webhook_route_create` | `references/payments.md` |
 | 5 | Legal | footer with seller details, terms/privacy/refund pages | `legal_entity` | `references/legal.md` |
 | 6 | First traffic | ads campaign approved and spending, tracking snippet on site | `ads_launch`, `ads_status` | `references/traffic.md` |
